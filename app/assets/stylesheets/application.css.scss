@@ -1,5 +1,19 @@
 @import "bootstrap";
 
+
+
+a {
+  color: red;
+}
+
+a:hover {
+  color: white;
+}
+
+body {
+  background: black;
+}
+
 .box_1 { 
   position: relative;
   width: 200px;
@@ -20,4 +34,12 @@
   width: 200px;
   height: 200px;
   background: #b7d84b;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
 }
