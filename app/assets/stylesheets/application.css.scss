@@ -1,45 +1,107 @@
 @import "bootstrap";
 
-
-
 a {
-  color: red;
+  color: #d9534f;
 }
 
 a:hover {
   color: white;
 }
 
+.alert.alert-success {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  color: black;
+  font-size: 2em;
+}
+
 body {
   background: black;
 }
 
-.box_1 { 
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: #ee3e64;
-}
-
-.box_2 { 
-  position: relative;
-  left: 200px;
-  width: 200px;
-  height: 200px;
-  background: #44accf;
-}
-
-.box_3 { 
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: #b7d84b;
+.btn {
+  border-radius: 10px;
 }
 
 h1 {
   color: white;
 }
 
-p {
+h2 {
   color: white;
 }
+
+.home {
+
+  .btn {
+    background-color: black;
+    color: white;
+  }
+}
+
+.jumbotron {
+  background-color: #d9534f;
+}
+
+label {
+  color: #d9534f;
+}
+
+li {
+  color: white;
+}
+
+.links-page {
+
+  h1 {
+  text-align: center;
+  color: #d9534f;
+  font-size: 4em;
+}
+
+  p {
+    text-align: center;
+    color: #d9534f;
+    font-size: 2em;
+  }
+
+  .btn {
+  margin: 5px;
+  font-size: 1.5em;
+  background-color: #d9534f;
+  color: black;
+}
+
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+
+p {
+  color: white;
+
+    a {
+      color: white;
+    }
+}
+
+#post_title {
+  background: #B2B2B2;
+  font-size: 1.5em;
+  color: black;
+}
+
+#post_body {
+  background: #B2B2B2;
+  font-size: 2em;
+}
+
+
+.user-info {
+  color: white;
+  margin-top: 9px;
+}
+
+
