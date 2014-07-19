@@ -12,10 +12,11 @@
   <div class="nav nav-tabs">
     <li><%= link_to "Home", root_path %></li>
     <li><%= link_to "Dawg Links", about_path %></li>
+    <li><%= link_to "Talk Dawgs", topics_path %></li>
 
     <div class="pull-right user-info">
            <% if current_user %>
-             Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+             Hello <%= current_user.name || current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
            <% else %>
              <%= link_to "Sign In", new_user_session_path %> or 
              <%= link_to "Sign Up", new_user_registration_path %>
