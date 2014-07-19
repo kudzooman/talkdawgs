@@ -1,6 +1,8 @@
 <h1><%= @post.title %></h1>
 
- <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-danger' %>
+  <% if policy(@post).edit? %>
+  <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-danger' %>
+  <% end %>
 
 <p><%= @post.body %></p>
 

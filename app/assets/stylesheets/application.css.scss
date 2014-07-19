@@ -15,6 +15,13 @@ a:hover {
   font-size: 2em;
 }
 
+.alert.alert-warning {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  color: black;
+  font-size: 2em;
+}
+
 body {
   background: black;
 }
@@ -96,6 +103,10 @@ p {
 #post_body {
   background: #B2B2B2;
   font-size: 2em;
+}
+
+small {
+  color: #d9534f;
 }
 
 
