@@ -1,7 +1,10 @@
 class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
+  has_many :images, dependent: :destroy
   belongs_to :user
-    belongs_to :topic
+  belongs_to :topic
+
+  mount_uploader :images, PostUploader
 
   default_scope { order('created_at DESC') }
 
