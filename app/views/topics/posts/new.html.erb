@@ -1,0 +1,19 @@
+<h1>What's Up Dawg fans?</h1>
+
+<div class="row">
+
+  <div class="col-md-4">
+
+    <p>Here's a couple links you might like:</p>
+    <ul>
+      <li><a id='link' class='btn btn-default' href="http://www.thedawgbone.com/">The Dawg Bone</a></li>
+      <li><a id='link' class='btn btn-default' href="http://www.sports-reference.com/cfb/schools/georgia/">Dawgs Sports Reference</a></li>
+      <li><a id='link' class='btn btn-default' href="https://twitter.com/UGAAthletics">Dawgs Twitter</a></li>
+    </ul>
+  </div>
+
+  <div class="col-md-8">
+   <%= render partial: 'form', locals: { topic: @topic, post: @post } %>
+   
+  </div>
+</div>

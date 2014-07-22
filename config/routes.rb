@@ -1,15 +1,27 @@
 Rails.application.routes.draw do
+ 
+   resources :posts, only: [:index]
+   resources :topics do
+     resources :posts, except: [:index], controller: 'topics/posts' do
+    resources :comments, only: [:create, :destroy]
+    get '/up-vote' => 'votes#up_vote', as: :up_vote
+    get '/down-vote' => 'votes#down_vote', as: :down_vote
+      resources :favorites, only: [:create, :destroy]
+   end
+ end
+   # Note the only: [] in the top-level post resources line. This is because we don't want to 
+   # create any /posts/:id routes, just posts/:post_id/comments.
 
-  devise_for :users
-    resources :users, only: [:update]
-
-    resources :topics do
-      resources :posts, except: [:index]
-    end
+     devise_for :users
+    resources :users, only: [:update, :show, :index]
 
   get 'about' => 'welcome#about'
 
+  get 'dawglinks' => 'welcome#dawglinks'
+
   root to: 'welcome#index'
+
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -65,4 +77,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

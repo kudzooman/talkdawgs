@@ -1,0 +1,42 @@
+
+
+<div class="row">
+  <div class="col-md-8">
+    <%= render partial: 'votes/voter', locals: {topic: @topic, post: @post } %>
+    <h1><%= markdown @post.title %></h1>
+      <p>
+        <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
+        post submitted <%= time_ago_in_words(@post.created_at) %> ago by
+        <%= @post.user.name %>
+      </p>
+    <h3><%= markdown @post.body %></h3>
+  </div>
+  
+  <div class="col-md-8">
+    <% if policy(@post).edit? %>
+      <%= link_to "Edit Post", edit_topic_post_path(@topic, @post), class: 'btn btn-danger btn-sm' %>
+    <% end %>
+    <% if policy(@post).destroy? %>
+      <%= link_to "Vaporize!", [@topic, @post], method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %>
+    <% end %> 
+  </div>
+
+<div>
+  <h3><%= pluralize(@post.points, 'point') %></h3>
+  <small>
+    <%= pluralize(@post.up_votes, 'up vote') %>
+    <%= pluralize(@post.down_votes, 'down vote') %>
+  </small>
+</div>
+<%= render partial: 'favorites/favorite', locals: { topic: @topic, post: @post } %>
+  <div class="col-md-8">
+    <hr/>
+    <h2 class='js-comments-count'><%= @comments.count %> Comments</h2>
+    <div class='js-comments'>
+      <%= render partial: 'comments/comment', collection: @comments %> 
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+  </div>
+</div>

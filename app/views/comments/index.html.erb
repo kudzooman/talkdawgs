@@ -1,0 +1,19 @@
+<h1>All Comments</h1>
+
+<% if policy(Comment.new).create? %>
+  <%= link_to "New Comment", new_comment_path, class: 'btn btn-danger' %>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to comment %>
+      </h4>
+      <small>
+        submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.name if comment.user %><br/>
+        <%= comments.count %> Comments
+      </small>
+    </div>
+  </div>
+<% end %>
