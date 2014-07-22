@@ -1,11 +1,11 @@
 @import "bootstrap";
 
 a {
-  color: #d9534f;
+  color: #CC0000;
 }
 
 a:hover {
-  color: white;
+  color: black;
 }
 
 .alert.alert-success {
@@ -23,19 +23,19 @@ a:hover {
 }
 
 body {
-  background: black;
+  background: #9A9A9A;
 }
 
 .btn {
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 h1 {
-  color: white;
+  color: black;
 }
 
 h2 {
-  color: white;
+  color: black;
 }
 
 .home {
@@ -57,6 +57,7 @@ h2 {
 
 .jumbotron {
   background-color: #d9534f;
+  color: black;
 }
 
 label {
@@ -70,24 +71,32 @@ li {
 .links-page {
 
   h1 {
-  text-align: center;
-  color: #d9534f;
-  font-size: 4em;
-}
+    text-align: center;
+    color: black;
+    font-size: 4em;
+  }
 
   p {
     text-align: center;
-    color: #d9534f;
+    color: black;
     font-size: 2em;
   }
 
   .btn {
-  margin: 5px;
-  font-size: 1.5em;
-  background-color: #d9534f;
-  color: black;
+    margin: 10px;
+    font-size: 1.5em;
+    background-color: #d9534f;
+    color: black;
+  }
+
 }
 
+
+.media {
+  background-color: #EEEEEE;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
 }
 
 .nav {
@@ -96,11 +105,19 @@ li {
 
 
 p {
-  color: white;
+  color: black;
 
     a {
       color: white;
     }
+}
+
+.posts {
+  .row {
+    .col-md-8 {
+      margin: 10px;
+    }
+  }
 }
 
 #post_title {
@@ -114,8 +131,20 @@ p {
   font-size: 2em;
 }
 
+/*topic show view */
+.row {
+  
+  p {
+    color: black;
+  }
+}
+
 small {
-  color: #d9534f;
+  color: black;
+}
+
+.tab-content {
+  margin: 10px;
 }
 
 
@@ -123,6 +152,7 @@ small {
   color: white;
   margin-top: 9px;
 }
+
 
  .vote-arrows {
    width: 40px;

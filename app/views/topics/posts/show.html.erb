@@ -13,11 +13,12 @@
   </div>
   
   <div class="col-md-8">
+      <%= link_to "Back", :back, class: 'btn btn-danger btn-sm' %>
     <% if policy(@post).edit? %>
       <%= link_to "Edit Post", edit_topic_post_path(@topic, @post), class: 'btn btn-danger btn-sm' %>
     <% end %>
     <% if policy(@post).destroy? %>
-      <%= link_to "Vaporize!", [@topic, @post], method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %>
+      <%= link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Are you sure?' } %>
     <% end %> 
   </div>
 
@@ -39,4 +40,5 @@
   <div class="col-md-8">
     <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
   </div>
+
 </div>

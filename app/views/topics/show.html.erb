@@ -1,22 +1,23 @@
 <h1><%= @topic.name %></h1>
+<p class="lead"><%= @topic.description %></p>
 
 <div class="col-md-6">
     <% if policy(Post.new).create? %>
       <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-danger btn-sm' %>
       <% end %>
     <% if policy(@topic).destroy? %>
-      <%= link_to "Vaporize!", @topic, method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Final answer? Cause this topic is about to be real gone.'} %>
+      <%= link_to "Vaporize!", @topic, method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: 'Final answer? Cause this topic is about to be gone.'} %>
     <% end %>
     <% if policy(@topic).update? %>
     <%= link_to "Edit Topic", edit_topic_path, class: 'btn btn-danger btn-sm' %>
   <% end %>
   </div>
 
-<div class="row">
-  <div class="col-md-8">
-    <p class="lead"><%= @topic.description %></p>
-    <%= render @posts %>
-    <%= will_paginate @posts %>
+<div class="posts">
+  <div class="row">
+    <div class="col-md-8">
+      <%= render @posts %>
+      <%= will_paginate @posts %>
+    </div>
   </div>
- 
 </div>
