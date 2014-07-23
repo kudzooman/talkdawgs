@@ -1,7 +1,8 @@
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Graduate);
 
 a {
-  color: #CC0000;
+  color: #BB0000;
 }
 
 a:hover {
@@ -9,14 +10,14 @@ a:hover {
 }
 
 .alert.alert-success {
-  background-color: #d9534f;
+  background-color: #BB0000;
   border-color: #d43f3a;
   color: black;
   font-size: 2em;
 }
 
 .alert.alert-warning {
-  background-color: #d9534f;
+  background-color: #BB0000;
   border-color: #d43f3a;
   color: black;
   font-size: 2em;
@@ -27,11 +28,177 @@ body {
 }
 
 .btn {
+  border: 2px solid;
   border-radius: 3px;
+  background-color: #BB0000 !important;
 }
+
+.col-md-3 {
+  -moz-box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  margin: 0px 45px 45px 45px;
+}
+
+.dawg-run {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  .georgia-youtube {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+      .dawg-vent {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+
+        .ajc {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+
+          .cbs {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+  }
+}
+
+.dawg-bone {
+  position: absolute;
+  margin-left: 200px;
+  width: 200px;
+  height: 200px;
+
+    .georgia-vimeo {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+
+      .dawg-chat {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+
+          .rivals {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            .sb-nation {
+              position: absolute;
+              width: 200px;
+              height: 200px;
+            }
+          }
+      }
+    }
+}
+
+.dawg-cast {
+  position: absolute;
+  margin-left: 400px;
+  width: 200px;
+  height: 200px;
+
+    .macon {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+
+      .georgia-dogs {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+
+          .wikipedia {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            .sicm {
+              position: absolute;
+              width: 200px;
+              height: 200px;
+            }
+          }
+      }
+    }
+}
+
+.dawg-view {
+  position: absolute;
+  margin-left: 600px;
+  width: 200px;
+  height: 200px;
+
+    .red-black {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+
+        .dude-you {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+
+          .espn {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            .two-four-seven {
+              position: absolute;
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+    }
+}
+
+.columbus {
+  position: absolute;
+  margin-left: 800px;
+  width: 200px;
+  height: 200px;
+
+    .dog-byte {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+
+        .bulldawg-illus {
+          position: absolute;
+          width: 200px;
+          height: 200px;
+
+          .fox {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+
+            .si {
+              position: absolute;
+              width: 200px;
+              max-height: 200px;
+            }
+          }
+        }
+    }
+}
+
+
 
 h1 {
   color: black;
+  font-family: 'Graduate', cursive;
 }
 
 h2 {
@@ -56,8 +223,13 @@ h2 {
 }
 
 .jumbotron {
-  background-color: #d9534f;
+  background-color: #BB0000;
   color: black;
+  border: 3px solid;
+  border-color: #FFFFEE;
+  -moz-box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.5);
+  box-shadow: 0 1px 6px rgba(0,0,0,.5);
 }
 
 label {
@@ -141,6 +313,14 @@ p {
 
 small {
   color: black;
+}
+
+.start {
+
+    .btn {
+      background-color: black !important;
+      border: 2px solid;
+    }
 }
 
 .tab-content {

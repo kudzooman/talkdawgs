@@ -2,7 +2,7 @@
 <div class="home">
   <div class="jumbotron">
     <h1>Talk Dawgs</h1>
-    <p>Talk Dawgs is a place for Georgia Bulldawg discourse and Dawg links for all Dawg Nation!</p>
+    <p>Talk Dawgs is a place for Georgia Bulldog discourse and Dawg links for all Dawg Nation! <br />If you like University of Georgia Football then this website is for you.</p>
     
     <p>
       <% if current_user %>
@@ -19,16 +19,25 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4">
+
+  <%= link_to dawglinks_path do %>
+  <div class="col-md-3">
     <h2>Can't get enough Dawg stuff?</h2>
     <p>We try to link to as many relevent sites as possible. If we don't have one you want, email us at talkdawgs@gmail.com</p>
   </div>
-  <div class="col-md-4">
+  <% end %>
+
+  <%= link_to topics_path do %>
+  <div class="col-md-3">
     <h2>Wanna talk about something specific?</h2>
     <p>Check out the topics and focus your rant.</p>
   </div>
-  <div class="col-md-4">
+  <% end %>
+
+  <%= link_to new_user_session_path do %>
+  <div class="col-md-3">
     <h2>Think this is "the year"?</h2>
     <p>So do we. Welcome to Talk Dawgs!</p>
   </div>
+  <% end %>
 </div>

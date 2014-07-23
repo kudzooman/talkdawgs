@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.visible_to(current_user).paginate(page: params[:page], per_page: 10)
+    @topics = Topic.visible_to(current_user).paginate(page: params[:page], per_page: 15)
     authorize @topics
   end
 
@@ -12,7 +12,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     authorize @topic
-    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 10)
+    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 15)
   end
 
   def edit
@@ -40,7 +40,7 @@ class TopicsController < ApplicationController
     if @topic.update_attributes(topic_params)
       redirect_to topics_path
     else
-      flash[:error] = "Error saving topic. Please try agai.n"
+      flash[:error] = "Error saving topic. Please try again"
       render :edit
     end
   end
