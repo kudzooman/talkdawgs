@@ -194,6 +194,16 @@ body {
     }
 }
 
+.home {
+  .jumbotron {
+    h1 {
+      -moz-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      -webkit-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+  }
+}
+
 
 
 h1 {
@@ -206,7 +216,6 @@ h2 {
 }
 
 .home {
-
   .btn {
     background-color: black;
     color: white;
@@ -214,11 +223,9 @@ h2 {
   }
 
   .start {
-
     .btn {
       font-size: 2em;
-    }
-    
+    } 
   }
 }
 
