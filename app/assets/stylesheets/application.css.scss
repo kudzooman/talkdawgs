@@ -247,7 +247,18 @@ li {
   color: white;
 }
 
+.links-page div {
+  display: inline-block;
+}
+
+.links-page:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
 .links-page {
+  text-align: justify;
 
   h1 {
     text-align: center;
@@ -262,7 +273,8 @@ li {
   }
 
   .btn {
-    margin: 10px;
+    margin: 1px;
+    padding: 15px;
     font-size: 1.5em;
     background-color: #d9534f;
     color: black;
